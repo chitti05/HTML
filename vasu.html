@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="game.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        margin: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        background-color: #980707;
+    }
+    
+    div {
+        font-size: large;
+        font-weight: 50;
+        color: rgb(21, 112, 91);
+        text-shadow: 5px #ae0dbc;
+    }
+    
+    form {
+        background-color: #09080800;
+        width: 350px;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 3px 3px 20px 0px rgb(12, 29, 214);
+        justify-items: center;
+        align-content: center;
+    }
+    
+    input[type='text'] {
+        height: 22px;
+        background-color: #aee4f4;
+        color: rgb(213, 24, 219);
+        font-size: 28px;
+        box-shadow: 0.5px 0.5px 2px 0.5px rgb(3, 72, 125);
+        font-weight: 400;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        width: 90%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    
+    input[type='button'] {
+        width: 100%;
+        padding: 15px;
+        color: rgb(148, 207, 30);
+        font-size: 25px;
+        font-weight: 600;
+        font-family: cursive;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transform: scale(0.8) 0.3s ease;
+        margin-bottom: 10px;
+        scale: 0.8;
+        background-color: #2a2a2a;
+    }
+    
+    input[type='button']:hover {
+        scale: 0.7;
+        background-color: rgb(250, 250, 251);
+        color: rgb(13, 13, 13);
+        font-size: larger;
+    }
+    
+    ::placeholder {
+        color: #4caf50;
+    }
+    
+    #result {
+        margin-bottom: 10px;
+        font-weight: bolder;
+        color: #4caf50;
+        font-size: 22px;
+        font-weight: 300;
+    }
+    
+    #play {
+        background-color: #4caf50;
+        color: #222222;
+    }
+    
+    #play:hover {
+        background-color: #1aab1e62;
+        color: white;
+    }
+    
+    h1 {
+        color: #07ff10;
+    }
+    @media (max-width: 600px) {
+        form {
+            width: 90%; /* Adjust form width */
+            padding: 15px;
+        }
+    
+        input[type='text'] {
+            font-size: 20px; /* Adjust input text size */
+        }
+    
+        input[type='button'] {
+            font-size: 20px; /* Adjust button text size */
+        }
+    
+        h1 {
+            font-size: 24px; /* Adjust heading size */
+        }
+    }
+    
+    @media (max-width: 400px) {
+        input[type='text'] {
+            font-size: 16px; /* Further reduce input text size */
+        }
+    
+        input[type='button'] {
+            font-size: 18px; /* Further reduce button text size */
+        }
+    
+        h1 {
+            font-size: 20px; /* Further reduce heading size */
+        }
+    }
+</style>
+</head>
+<body>
+    <div>
+        <h1>Rock , Paper & Scissor</h1>
+        <form>
+        
+            <input type="text" name="dis" id="dis" readonly placeholder="Make your Choice">
+         
+
+        <div>
+        <input type="button"  value="Rock" onclick="document.getElementById('dis').value='Rock' " id="humcos">
+
+        <input type="button" id="humcos" value="Paper" onclick="document.getElementById('dis').value='Paper'">
+
+        <input type="button" id="humcos" value="Scissor" onclick="document.getElementById('dis').value='Scissor'">
+
+    </div>
+    <div>   Computer Choice..... </div>
+         <input type="text" name="disp" id="comcos"  readonly placeholder="Its a Computer's choice">
+     
+     <input type="button" value="Play Game" onclick="playGame()" id="play">
+
+  
+   <div> Winner is :</div>
+   <input type="text" name="result"
+    id="result" placeholder="Play a game to get a Winner!" readonly>
+</form>
+ </div>
+<script src="game.js"></script>
+</body>
+</html>
+
